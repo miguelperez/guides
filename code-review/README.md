@@ -23,6 +23,16 @@ Everyone
 * Talk in person if there are too many "I didn't understand" or "Alternative
   solution:" comments. Post a follow-up comment summarizing offline discussion.
 
+Bedore submiting your code for review
+-------------------------------------
+
+* Make sure you have reviewed thoroughly your code.
+* Make sure you have done test cases for the most important functionality.
+* Ask yourself if all the proper use cases have been implemented.
+* Ask yourself this question: If I where a user, would I be confortable using this?
+* Check if your code follows the coding guidelines.
+
+
 Having your code reviewed
 -------------------------
 

@@ -11,17 +11,6 @@ Install the latest version of Xcode from the App Store.
 Set up your laptop with [this script](https://github.com/thoughtbot/laptop)
 and [these dotfiles](https://github.com/thoughtbot/dotfiles).
 
-Create Rails app
-----------------
-
-Get Suspenders.
-
-    gem install suspenders
-
-Create the app.
-
-    suspenders app --heroku true --github organization/app
-
 Create iOS app
 --------------
 

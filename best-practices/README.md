@@ -9,6 +9,7 @@ General
 * Don't duplicate the functionality of a built-in library.
 * Don't swallow exceptions or "fail silently."
 * Don't write code that guesses at future functionality.
+* Document your code.
 * [Exceptions should be exceptional].
 * [Keep the code simple].
 
@@ -19,7 +20,7 @@ Object-Oriented Design
 ----------------------
 
 * Avoid global variables.
-* Avoid long parameter lists.
+* Avoid long parameter lists. Instead use an options hash.
 * Limit collaborators of an object (entities an object depends on).
 * Limit an object's dependencies (entities that depend on an object).
 * Prefer composition over inheritance.
@@ -152,17 +153,21 @@ Email
 
 * Use [SendGrid] or [Amazon SES] to deliver email in staging and production
   environments.
-* Use a tool like [MailView] to look at each created or updated mailer view
+* Use a tool like [MailView] or [mailcatcher] to look at each created or updated mailer view
   before merging.
 
 [Amazon SES]: http://robots.thoughtbot.com/post/3105121049/delivering-email-with-amazon-ses-in-a-rails-3-app
 [SendGrid]: https://devcenter.heroku.com/articles/sendgrid
 [MailView]: https://github.com/37signals/mail_view
+[Mailcatcher]: http://mailcatcher.me/
 
 JavaScript
 ----------
 
-* Use CoffeeScript.
+* Prefer to use a pluging instead of writing one yourself.
+* Be sure to use javascript best practices.
+* If you need to modify an existing plugin, do not modify the source. If the project is hosted in github fork it and submit a pull request if is a fix or enhacement.
+
 
 HTML
 ----
@@ -196,15 +201,15 @@ Objective-C
 Shell
 -----
 
-* Don't parse the output of `ls`. See [here][parsingls] for details and 
+* Don't parse the output of `ls`. See [here][parsingls] for details and
   alternatives.
-* Don't use `cat` to provide a file on `stdin` to a process that accepts 
+* Don't use `cat` to provide a file on `stdin` to a process that accepts
   file arguments itself.
-* Don't use a `/bin/sh` [shebang][] unless you plan to test and run your 
-  script on at least: Actual Sh, Dash in POSIX-compatible mode (as it 
-  will be run on Debian), and Bash in POSIX-compatible mode (as it will 
+* Don't use a `/bin/sh` [shebang][] unless you plan to test and run your
+  script on at least: Actual Sh, Dash in POSIX-compatible mode (as it
+  will be run on Debian), and Bash in POSIX-compatible mode (as it will
   be run on OSX).
-* Don't use any non-POSIX [features][bashisms] when using a `/bin/sh` 
+* Don't use any non-POSIX [features][bashisms] when using a `/bin/sh`
   [shebang][].
 * If calling `cd`, have code to handle a failure to change directories.
 * If calling `rm` with a variable, ensure the variable is not empty.
@@ -217,16 +222,16 @@ Shell
 * Prefer `printf` over `echo`.
 * Prefer `sed '/re/!d; s//.../'` to `grep re | sed 's/re/.../'`.
 * Prefer `sed 'cmd; cmd'` to `sed -e 'cmd' -e 'cmd'`.
-* Prefer checking exit statuses over output in `if` statements (`if grep 
+* Prefer checking exit statuses over output in `if` statements (`if grep
   -q ...; `, not `if [ -n "$(grep ...)" ];`).
-* Prefer reading environment variables over process output (`$TTY` not 
+* Prefer reading environment variables over process output (`$TTY` not
   `$(tty)`, `$PWD` not `$(pwd)`, etc).
 * Use `$( ... )`, not backticks for capturing command output.
 * Use `$(( ... ))`, not `expr` for executing arithmetic expressions.
-* Use `1` and `0`, not `true` and `false` to represent boolean 
+* Use `1` and `0`, not `true` and `false` to represent boolean
   variables.
 * Use `find -print0 | xargs -0`, not `find | xargs`.
-* Use quotes around every `"$variable"` and `"$( ... )"` expression 
+* Use quotes around every `"$variable"` and `"$( ... )"` expression
   unless you want them to be word-split and/or interpreted as globs.
 * Use the `local` keyword with function-scoped variables.
 * Identify common problems with [shellcheck][].
