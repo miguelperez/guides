@@ -9,7 +9,7 @@ General
 * Don't duplicate the functionality of a built-in library.
 * Don't swallow exceptions or "fail silently."
 * Don't write code that guesses at future functionality.
-* Document your code.
+* Document your code, use YARD.
 * [Exceptions should be exceptional].
 * [Keep the code simple].
 
@@ -164,8 +164,9 @@ Email
 JavaScript
 ----------
 
-* Prefer to use a pluging instead of writing one yourself.
-* Be sure to use javascript best practices.
+* If you like coffeeScript use it.
+* Prefer to use a plug-in instead of writing one yourself.
+* Be sure to use [javascript best practices](/javascript-best-practices).
 * If you need to modify an existing plugin, do not modify the source. If the project is hosted in github fork it and submit a pull request if is a fix or enhacement.
 
 

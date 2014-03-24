@@ -6,6 +6,7 @@ Guides for getting things done, programming well, and programming in style.
 * [Protocol](/protocol)
 * [Code Review](/code-review)
 * [Best Practices](/best-practices)
+* [Javascript Best Practices](/javascript-best-practices)
 * [Style](/style)
 
 High level guidelines:
